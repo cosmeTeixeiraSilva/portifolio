@@ -20,10 +20,10 @@ export default function Hero() {
         Cosme Teixeira da Silva
       </h1>
       <h1
-        className="z-50 absolute bottom-2 right-2 bg-[#454545] text-sm sm:text-3xl p-1 rounded text-white
+        className="z-50 absolute text-under bottom-2 right-2 bg-[#454545] text-sm sm:text-3xl p-1 rounded text-white
   "
       >
-        cosme.teixeira@gmail.com
+        <span>cosme.teixeira@gmail.com</span>
       </h1>
     </div>
   );
