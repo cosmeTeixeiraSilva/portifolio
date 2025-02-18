@@ -14,13 +14,13 @@ export default function Hero() {
       />
 
       <h1
-        className="z-50 absolute top-20 left-2 bg-white text-sm p-2 rounded text-orange-400 sm:text-3xl
+        className="z-50 absolute top-4 left-2 bg-[#454545] text-sm p-1 rounded text-orange-400 sm:text-3xl
   "
       >
-        Cosme Teixera da Silva
+        Cosme Teixeira da Silva
       </h1>
       <h1
-        className="z-50 absolute top-40 left-12 bg-orange-500 text-sm sm:text-3xl p-2 rounded text-white
+        className="z-50 absolute bottom-2 right-2 bg-[#454545] text-sm sm:text-3xl p-1 rounded text-white
   "
       >
         cosme.teixeira@gmail.com
