@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="relative top-0 left-0  h-[500]">
+    <div className="relative top-0 left-0  h-[500px]">
       <Image
         src="/hero.png"
         alt="LogoHero"
