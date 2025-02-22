@@ -13,6 +13,7 @@ export default function Menu() {
         <h1 className=" text-black opacity-80 p-2 hover:text-orange-300">
           Tecnologias
         </h1>
+        
       </div>
     </div>
   );
