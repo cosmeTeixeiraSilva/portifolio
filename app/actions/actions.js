@@ -1,14 +1,13 @@
 "use server";
 import nodemailer from "nodemailer";
-import { writeFile, unlink } from "fs/promises";
-import path from "path";
+
 //Envio sem Anexo 
 export async function sendEmail(formData) {
     const email = formData.get("email");
     const celular = formData.get("celular");
     const subject = formData.get("subject") + " - " + formData.get("email");
-    const message = formData.get("message")+ "\n" + formData.get("celular");
-   
+    const message = formData.get("message") + "\n" + formData.get("celular");
+
 
     //Dados Recebidos pelo FrontEnd
     console.log(email);

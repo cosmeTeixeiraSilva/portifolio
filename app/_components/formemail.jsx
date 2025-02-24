@@ -9,7 +9,7 @@ export default function ContactForm() {
     event.preventDefault();
 
     const form = new FormData(event.target);
-    form.append("phone", phone); // Adiciona o telefone manualmente
+    //form.append("phone", phone); // Adiciona o telefone manualmente
 
     const response = await sendEmail(form);
     setStatus(response.message);
@@ -31,7 +31,7 @@ export default function ContactForm() {
         id="email"
         placeholder="Seu e-mail"
         required
-        className="border p-2 rounded w-full sm:w-2/3 mx-auto"
+        className="border p-2 rounded w-full sm:w-2/3 mx-aut text-black"
       />
 
       <input
