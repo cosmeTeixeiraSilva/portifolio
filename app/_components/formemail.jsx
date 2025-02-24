@@ -3,24 +3,75 @@ import { useState } from "react";
 import { sendEmail } from "../actions/actions";
 
 export default function ContactForm() {
-    const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("");
 
-    async function handleSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget);
+  async function handleSubmit(event) {
+    event.preventDefault();
 
-        const response = await sendEmail(formData);
-        setStatus(response.message);
-    }
+    const form = new FormData(event.target);
+    form.append("phone", phone); // Adiciona o telefone manualmente
 
-    return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4  w-full mx-auto p-4 rounded ">
-            <p>Entre em Contato: </p>
-            <input type="email" name="email" placeholder="Seu e-mail" required className="border p-2 rounded w-2/3 mx-auto" />
-            <input type="text" name="subject" placeholder="Assunto" required className="border p-2 rounded w-2/3 mx-auto text-black" />
-            <textarea name="message" placeholder="Mensagem" required className="border p-2 rounded w-2/3 mx-auto text-black" />
-            <button type="submit" className="bg-blue-500 text-white p-2 rounded w-2/3 mx-auto">Enviar</button>
-            {status && <p>{status}</p>}
-        </form>
-    );
+    const response = await sendEmail(form);
+    setStatus(response.message);
+  }
+
+  return (
+    <form
+      id="emailForm"
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-4 w-full mx-auto p-4 rounded"
+    >
+      <p className="text-center font-semibold underline underline-offset-4">
+        Entre em Contato:
+      </p>
+
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Seu e-mail"
+        required
+        className="border p-2 rounded w-full sm:w-2/3 mx-auto"
+      />
+
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="Assunto"
+        required
+        className="border p-2 rounded w-full sm:w-2/3 mx-auto text-black"
+      />
+
+      {/* Campo com máscara de telefone */}
+      <input
+        type="number"
+        name="celular"
+        id="celular"
+        max={999999999999}
+        placeholder="35900000000"
+        required
+        className="border p-2 rounded w-full sm:w-2/3 mx-auto text-black"
+      />
+
+      <textarea
+        name="message"
+        id="message"
+        placeholder="Mensagem"
+        required
+        className="border p-2 rounded w-full sm:w-2/3 mx-auto text-black"
+      />
+      {status && (
+        <p className=" bg-green-400 p-2 rounded border-2 border-black font-semibold">
+          {status}
+        </p>
+      )}
+      <button
+        type="submit"
+        className="bg-blue-500 text-white p-2 rounded w-full sm:w-2/3 mx-auto"
+      >
+        Enviar
+      </button>
+    </form>
+  );
 }

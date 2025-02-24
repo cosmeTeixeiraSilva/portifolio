@@ -4,7 +4,7 @@ import "./globals.css";
 
 
 export const metadata = {
-  title: "Meu Portifolio - cosme.teixeira@gmail.com",
+  title: "Meu Portifólio - cosme.teixeira@gmail.com",
   description: "cosme.teixeira@gmail.com",
 };
 
