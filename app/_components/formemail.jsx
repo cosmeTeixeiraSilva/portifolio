@@ -31,7 +31,7 @@ export default function ContactForm() {
         id="email"
         placeholder="Seu e-mail"
         required
-        className="border p-2 rounded w-full sm:w-2/3 mx-aut text-black"
+        className="border p-2 rounded w-full sm:w-2/3 mx-auto text-black"
       />
 
       <input
@@ -62,7 +62,7 @@ export default function ContactForm() {
         className="border p-2 rounded w-full sm:w-2/3 mx-auto text-black"
       />
       {status && (
-        <p className=" bg-green-400 p-2 rounded border-2 border-black font-semibold">
+        <p className=" bg-green-400 p-2 rounded border-2 border-black font-semibold w-full sm:w-2/3 mx-auto m-2">
           {status}
         </p>
       )}
