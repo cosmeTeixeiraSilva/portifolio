@@ -4,6 +4,15 @@ import { sendEmail } from "../actions/actions";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("");
+  //useEffect monitorando alteração de state da variavel status
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus(""); // Remove a mensagem após 3 segundos
+      }, 3000);
+      return () => clearTimeout(timer); // Limpa o timeout se o componente for desmontado
+    }
+  }, [status]);
 
   async function handleSubmit(event) {
     event.preventDefault();
