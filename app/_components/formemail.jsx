@@ -62,7 +62,7 @@ export default function ContactForm() {
         className="border p-2 rounded w-full sm:w-2/3 mx-auto text-black"
       />
       {status && (
-        <p className=" bg-green-400 p-2 rounded border-2 border-black font-semibold w-full sm:w-2/3 mx-auto m-2">
+        <p className=" bg-green-400 p-2 rounded border-2 border-white font-semibold w-full sm:w-2/3 sm:text-md mx-auto m-2 text-sm">
           {status}
         </p>
       )}

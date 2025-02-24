@@ -41,7 +41,7 @@ export async function sendEmail(formData) {
         });
 
         console.log("Email Enviado com Sucesso");
-        return { success: true, message: "E-mail enviado com sucesso!" };
+        return { success: true, message: "Obrigado,a equipe recebeu seu e-mail!" };
 
     } catch (error) {
         console.log("Erro ao enviar e-mail:", error);
